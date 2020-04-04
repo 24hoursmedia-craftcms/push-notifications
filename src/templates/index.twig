@@ -1,0 +1,40 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Push Notifications plugin for Craft CMS 3.x
+ *
+ * Push Notifications index.twig
+ *
+ * @author    24hoursmedia
+ * @copyright Copyright (c) 2020 24hoursmedia
+ * @link      https://www.24hoursmedia.com/en
+ * @package   PushNotifications
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("twentyfourhoursmedia\\pushnotifications\\assetbundles\\pushnotifications\\PushNotificationsAsset") %}
+{% do view.registerAssetBundle("twentyfourhoursmedia\\pushnotifications\\assetbundles\\indexcpsection\\IndexCPSectionAsset") %}
+
+{% set docsUrl = "https://github.com/24hoursmedia-craftcms/push-notifications/blob/master/README.md" %}
+
+{% set title = "Push Notifications" %}
+
+{% set pluginCpUrl = url('push-notifications') %}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@twentyfourhoursmedia/pushnotifications/assetbundles/indexcpsection/dist', true) ~ '/img/Index-icon.svg' %}
+
+{% set extraPageHeaderHtml %}
+    <div class="buttons">
+        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('push-notifications') }}</a>
+    </div>
+{% endset %}
+
+{% set content %}
+    <h2>{{ "Index CP Section body goes here"|t('push-notifications') }}</h2>
+    <img src="{{ iconUrl }}" height="64" width="64" />
+    <p class="textline"></p>
+{% endset %}

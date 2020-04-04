@@ -1,0 +1,20 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Push Notifications plugin for Craft CMS
+ *
+ * PushNotificationsWidget Widget Body
+ *
+ * @author    24hoursmedia
+ * @copyright Copyright (c) 2020 24hoursmedia
+ * @link      https://www.24hoursmedia.com/en
+ * @package   PushNotifications
+ * @since     1.0.0
+ */
+#}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@twentyfourhoursmedia/pushnotifications/assetbundles/pushnotificationswidgetwidget/dist', true) ~ '/img/PushNotificationsWidget-icon.svg' %}
+
+<img src="{{ iconUrl }}" height="64" width="64" />
+
+<p>{{ message }}</p>

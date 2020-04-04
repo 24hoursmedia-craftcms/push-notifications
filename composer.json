@@ -1,0 +1,44 @@
+{
+    "name": "twentyfourhoursmedia/push-notifications",
+    "description": "Web push notifications using firebase for Craft CMS",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "push notifications"
+    ],
+    "support": {
+        "docs": "https://github.com/24hoursmedia-craftcms/push-notifications/blob/master/README.md",
+        "issues": "https://github.com/24hoursmedia-craftcms/push-notifications/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "24hoursmedia",
+            "homepage": "https://www.24hoursmedia.com/en"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "twentyfourhoursmedia\\pushnotifications\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Push Notifications",
+        "handle": "push-notifications",
+        "developer": "24hoursmedia",
+        "developerUrl": "https://www.24hoursmedia.com/en",
+        "documentationUrl": "https://github.com/24hoursmedia-craftcms/push-notifications/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/24hoursmedia-craftcms/push-notifications/master/CHANGELOG.md",
+        "components": {
+            "pushNotificationsService": "twentyfourhoursmedia\\pushnotifications\\services\\PushNotificationsService"
+        },
+        "class": "twentyfourhoursmedia\\pushnotifications\\PushNotifications"
+    }
+}

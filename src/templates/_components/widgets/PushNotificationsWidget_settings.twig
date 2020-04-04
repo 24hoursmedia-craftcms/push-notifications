@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Push Notifications plugin for Craft CMS
+ *
+ * PushNotificationsWidget Widget Settings
+ *
+ * @author    24hoursmedia
+ * @copyright Copyright (c) 2020 24hoursmedia
+ * @link      https://www.24hoursmedia.com/en
+ * @package   PushNotifications
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("twentyfourhoursmedia\\pushnotifications\\assetbundles\\pushnotifications\\PushNotificationsAsset") %}
+
+{{ forms.textField({
+    label: 'Message',
+    instructions: 'Enter a message here.',
+    id: 'message',
+    name: 'message',
+    value: widget['message']})
+}}
